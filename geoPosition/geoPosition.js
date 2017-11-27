@@ -8,7 +8,7 @@ function setup() {
   createCanvas(400, 400);
 
   if (geoCheck() == true) {
-    background(255);
+    background(225,255,255);
     watchPosition(positionChanged);
 
     text("lat: " + locationData.latitude, 10, 20);

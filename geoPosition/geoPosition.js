@@ -6,6 +6,7 @@ function preload() {
 
 function setup() {
   createCanvas(400, 400);
+  background(100,100,100);
 
   if (geoCheck() == true) {
     background(225,255,255);

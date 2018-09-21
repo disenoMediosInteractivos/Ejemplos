@@ -2,10 +2,10 @@
 
 ### Gestos e interacción
 1.[ Arrastrar](https://disenomediosinteractivos.github.io/Tutoriales/04_gestos_desktop/codigo/arrastrar/)
-2. [Velocidad del ratón]()
+2. [Velocidad del ratón](https://disenomediosinteractivos.github.io/Tutoriales/04_gestos_desktop/codigo/velocidad%20mouse/)
 3. [Lanzar](https://disenomediosinteractivos.github.io/Tutoriales/04_gestos_desktop/codigo/lanzar/)
 4. [Clics por minuto](https://disenomediosinteractivos.github.io/Tutoriales/04_gestos_desktop/codigo/clics%20por%20segundo/)
-5. [Tamaño de la ventana](https://disenomediosinteractivos.github.io/Tutoriales/04_gestos_desktop/codigo/velocidad%20mouse/)
+5. [Tamaño de la ventana](https://disenomediosinteractivos.github.io/Tutoriales/04_gestos_desktop/codigo/resize%20window/)
 6. [Dentro del canvas](https://disenomediosinteractivos.github.io/Tutoriales/04_gestos_desktop/codigo/canvas%20mouseIN/)
 
 ### Gestos e interacción (dispositivos móviles)

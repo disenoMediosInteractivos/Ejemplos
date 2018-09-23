@@ -3,7 +3,7 @@
 ### Gestos e interacción
 1. [ Arrastrar](https://disenomediosinteractivos.github.io/ejemplos/04_gestos/arrastrar/)
 2. [Velocidad del ratón](https://disenomediosinteractivos.github.io/ejemplos/04_gestos/velocidad%20mouse/)
-3. [Lanzar]https://disenomediosinteractivos.github.io/ejemplos/04_gestos/lanzar/)
+3. [Lanzar](https://disenomediosinteractivos.github.io/ejemplos/04_gestos/lanzar/)
 4. [Clics por minuto](https://disenomediosinteractivos.github.io/ejemplos/04_gestos/clics%20por%20segundo/)
 5. [Tamaño de la ventana](https://disenomediosinteractivos.github.io/ejemplos/04_gestos/resize%20window/)
 6. [Dentro del canvas](https://disenomediosinteractivos.github.io/ejemplos/04_gestos/canvas%20mouseIN/)

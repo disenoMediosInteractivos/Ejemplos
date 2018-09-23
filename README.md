@@ -16,7 +16,7 @@
 5. [Aceleración](https://disenomediosinteractivos.github.io/ejemplos/05_gestos_mobile/f_aceleracion/)
 
 ### Geolocalización
-1. [Configuración simple](https://disenomediosinteractivos.github.io/ejemplos/06_geolocation/01_setup/01_setup/)
+1. [Configuración simple](https://disenomediosinteractivos.github.io/ejemplos/06_geolocation/01_setup)
 2. [Configuración movimiento](https://disenomediosinteractivos.github.io/ejemplos/06_geolocation/01_2_motion)
 2. [Mapa](https://disenomediosinteractivos.github.io/ejemplos/06_geolocation/02_map/)
 3. [Distancias](https://disenomediosinteractivos.github.io/ejemplos/06_geolocation/03_distance/)

@@ -2,27 +2,27 @@
 
 ### Gestos e interacción
 1. Arrastrar
-  * [Simple]()| [editar]()
-  * [Avanzado]()| [editar]()
+  * [Simple](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/01_arrastrar%20simple/) | [editar]()
+  * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/01_arrastrar) | [editar]()
   
 2. Velocidad del ratón
-  * [Simple]()| [editar]()
-  * [Avanzado]()| [editar]()
+  * [Simple]() | [editar]()
+  * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/velocidad%20mouse/) | [editar]()
   
 3. Lanzar
-  * [Avanzado]()| [editar]()
+  * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/04_lanzar) | [editar]()
 
 4. Clics por minuto
-  * [Simple]()| [editar]()
-  * [Avanzado]()| [editar]()
+  * [Simple](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/03_clics%20por%20segundo%20simple/)| [editar]()
+  * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/03_clics%20por%20segundo/)| [editar]()
   
 5. Tamaño de la ventana 
-  * [Simple]()| [editar]()
-  * [Avanzado]()| [editar]()
+  * [Simple](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/05_resize%20window%20simple/) | [editar]()
+  * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/05_resize%20window/) | [editar]()
 
 6. Dentro del canvas
-  * [Simple]()| [editar]()
-  * [Avanzado]()| [editar]()
+  * [Simple](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/02_mouse%20in%20simple/) | [editar]()
+  * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/02_mouse%20in/) | [editar]()
 
 ### Gestos e interacción (dispositivos móviles)
 1. [Rotación](https://disenomediosinteractivos.github.io/ejemplos/05_gestos_mobile/b_rotacion/)

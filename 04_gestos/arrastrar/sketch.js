@@ -21,7 +21,7 @@ function draw() {
     bolas[i].mostrar();
     bolas[i].mover();
   }
-  
+
   //texto
   fill(100);
   text("Arrastre las bolas por la pantalla" , 30, 30);

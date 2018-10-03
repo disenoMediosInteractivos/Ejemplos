@@ -27,7 +27,7 @@ function adentro() {
 
 }
 
-//funcion afuera: se activa cuando el mouse sale del canvas
+//función afuera: se activa cuando el mouse sale del canvas
 function afuera() {
 
   //cambia el color de fondo a rojo y muestra un texto

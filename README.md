@@ -2,27 +2,27 @@
 
 ### Gestos e interacción
 1. Arrastrar
-  * Simple | ver | editar
-  * Avanzado | ver | editar
+  * [Simple]()| [editar]()
+  * [Avanzado]()| [editar]()
   
 2. Velocidad del ratón
-  * Simple | ver | editar
-  * Avanzado | ver | editar
+  * [Simple]()| [editar]()
+  * [Avanzado]()| [editar]()
   
 3. Lanzar
-  * Avanzado | ver | editar
+  * [Avanzado]()| [editar]()
 
 4. Clics por minuto
-  * Simple | ver | editar
-  * Avanzado | ver | editar
-
+  * [Simple]()| [editar]()
+  * [Avanzado]()| [editar]()
+  
 5. Tamaño de la ventana 
-  * Simple | ver | editar
-  * Avanzado | ver | editar
+  * [Simple]()| [editar]()
+  * [Avanzado]()| [editar]()
 
 6. Dentro del canvas
-  * Simple | ver | editar
-  * Avanzado | ver | editar
+  * [Simple]()| [editar]()
+  * [Avanzado]()| [editar]()
 
 ### Gestos e interacción (dispositivos móviles)
 1. [Rotación](https://disenomediosinteractivos.github.io/ejemplos/05_gestos_mobile/b_rotacion/)

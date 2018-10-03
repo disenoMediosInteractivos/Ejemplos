@@ -6,8 +6,8 @@
   * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/01_arrastrar) | [editar]()
   
 2. Velocidad del ratón
-  * [Simple]() | [editar]()
-  * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/velocidad%20mouse/) | [editar]()
+  * [Simple](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/06_velocidad_mouse_simple/) | [editar]()
+  * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/06_velocidad_mouse/) | [editar]()
   
 3. Lanzar
   * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/04_lanzar) | [editar]()

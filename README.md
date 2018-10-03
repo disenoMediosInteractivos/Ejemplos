@@ -3,26 +3,26 @@
 ### Gestos e interacción
 1. Arrastrar
   * [Simple](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/01_arrastrar%20simple/) | [editar]()
-  * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/01_arrastrar) | [editar]()
+  * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/01_arrastrar) | [editar](https://editor.p5js.org/laurajunco/sketches/SkozlcA0Z)
   
 2. Velocidad del ratón
   * [Simple](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/06_velocidad_mouse_simple/) | [editar]()
-  * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/06_velocidad_mouse/) | [editar]()
+  * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/06_velocidad_mouse/) | [editar](https://editor.p5js.org/laurajunco/sketches/H11vmq0Ab)
   
 3. Lanzar
   * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/04_lanzar) | [editar]()
 
 4. Clics por minuto
   * [Simple](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/03_clics%20por%20segundo%20simple/)| [editar]()
-  * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/03_clics%20por%20segundo/)| [editar]()
+  * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/03_clics%20por%20segundo/)| [editar](https://editor.p5js.org/laurajunco/sketches/S1dBY5RRW)
   
 5. Tamaño de la ventana 
   * [Simple](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/05_resize%20window%20simple/) | [editar]()
-  * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/05_resize%20window/) | [editar]()
+  * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/05_resize%20window/) | [editar](https://editor.p5js.org/laurajunco/sketches/BkEKWjCCW)
 
 6. Dentro del canvas
   * [Simple](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/02_mouse%20in%20simple/) | [editar]()
-  * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/02_mouse%20in/) | [editar]()
+  * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/02_mouse%20in/) | [editar](https://editor.p5js.org/laurajunco/sketches/SyKFXj00Z)
 
 ### Gestos e interacción (dispositivos móviles)
 1. [Rotación](https://disenomediosinteractivos.github.io/ejemplos/05_gestos_mobile/b_rotacion/)

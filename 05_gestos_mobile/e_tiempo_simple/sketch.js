@@ -33,6 +33,8 @@ function draw() {
     stroke(255);
     strokeWeight(4);
     fill(255, 0, 0);
+
+    //el valor del contador determina el tamaño de la elipse
     ellipse(mouseX, mouseY, contador, contador);
   }
 

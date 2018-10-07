@@ -37,7 +37,6 @@ function draw() {
     //el valor del contador determina el tamaño de la elipse
     ellipse(mouseX, mouseY, contador, contador);
   }
-
 }
 
 //esta funcion se activa cuando la pantalla es tocada: cambia contar a verdadero
@@ -45,7 +44,7 @@ function touchStarted() {
   contar = true;
 }
 
-//cuando se deja de tocar la pantalla se activa
+//cuando se deja de tocar la pantalla se activa esta funcion
 function touchEnded() {
 
   //contar vuelve a ser falso y se reinicia el contador

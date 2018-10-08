@@ -26,7 +26,7 @@ function draw() {
   fill(r, g, b);
 
   //pinta una elipse
-  ellipse(width/2, heigth/2, width/4, width/4);
+  ellipse(width/2, height/2, width/4, width/4);
 }
 
 //cuando el dispositivo detecta movimiento llama a la funcion acelerar de la bola

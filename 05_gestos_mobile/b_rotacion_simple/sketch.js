@@ -34,7 +34,7 @@ function draw() {
 
   //pinta la elipse
   fill(255, 0, 0);
-  strokeWeigth(2);
+  strokeWeight(2);
   stroke(255);
   ellipse(x, y, 30, 30);
 

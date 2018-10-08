@@ -95,4 +95,5 @@ function touchMoved() {
       bolas[i].matar();
     }
   }
+  return false;
 }

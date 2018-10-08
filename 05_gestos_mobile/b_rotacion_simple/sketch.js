@@ -40,6 +40,9 @@ function draw() {
 
   //suma la velocidad en x y en y a las posiciones de la elipse
   x = x + velx;
-  y = y + velY;
+  y = y + vely;
 
+  //evita que las posiciones se salgan del canvas
+  x = constrain(x, 0, width);
+  y = constrain(y, 0, height);
 }

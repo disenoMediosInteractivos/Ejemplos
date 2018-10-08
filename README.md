@@ -26,7 +26,7 @@
 
 ### Gestos e interacción (dispositivos móviles)
 1. Rotación
-  * [Simple](https://disenomediosinteractivos.github.io/Ejemplos/05_gestos_mobile/b_rotacion/) - [editar]()
+  * [Simple](https://disenomediosinteractivos.github.io/Ejemplos/05_gestos_mobile/b_rotacion_simple/) - [editar]()
   * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/05_gestos_mobile/b_rotacion/) - [editar](https://editor.p5js.org/laurajunco/sketches/rkbRR5DyG)
   
 2. Toques

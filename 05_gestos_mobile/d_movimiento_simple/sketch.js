@@ -18,7 +18,7 @@ function draw() {
   //pinta la elipse en la posicion x, y
   fill(255, 0, 0);
   stroke(255);
-  strokeWeigth(2);
+  strokeWeight(2);
   ellipse(x, y, tam, tam);
 
 }

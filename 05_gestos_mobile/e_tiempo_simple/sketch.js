@@ -5,21 +5,29 @@ var contador;
 var contar;
 
 function setup() {
+
   //crea un canvas del tamano de la ventana
   createCanvas(windowWidth, windowHeight);
+  background(0);
 
   contador = 0;
   contar = false;
 }
 
 function draw() {
-  background(0);
+
+  //cuadrado texto
+  fill(0);
+  noStroke();
+  rect(0, 0, 400, 50);
 
   //texto
   fill(255);
   noStroke();
   text("Mantenga presionada la pantalla para crear una elipse", 20, 20);
   text("Tiempo presionado: " + contador, 20, 40);
+
+
 
   //contar: la cuenta aumenta si contar es true y si el numero de frame es multiplo de 10
   if (frameCount % 10 != 0 && contar) {

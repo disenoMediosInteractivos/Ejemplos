@@ -26,22 +26,22 @@
 
 ### Gestos e interacción (dispositivos móviles)
 1. Rotación
-  * [Simple](https://disenomediosinteractivos.github.io/Ejemplos/05_gestos_mobile/b_rotacion_simple/) - [editar]()
+  * [Simple](https://disenomediosinteractivos.github.io/Ejemplos/05_gestos_mobile/b_rotacion_simple/) - [editar](https://editor.p5js.org/laurajunco/sketches/rJ4jtmucX)
   * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/05_gestos_mobile/b_rotacion/) - [editar](https://editor.p5js.org/laurajunco/sketches/rkbRR5DyG)
   
 2. Toques
   * [Simple](https://disenomediosinteractivos.github.io/Ejemplos/05_gestos_mobile/c_toques/) - [editar](https://editor.p5js.org/laurajunco/sketches/Hki-lpvkM)
   
 3. Movimiento
-  * [Simple](https://disenomediosinteractivos.github.io/Ejemplos/05_gestos_mobile/d_movimiento_simple/) - [editar]()
+  * [Simple](https://disenomediosinteractivos.github.io/Ejemplos/05_gestos_mobile/d_movimiento_simple/) - [editar](https://editor.p5js.org/laurajunco/sketches/B1E4smd5Q)
   * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/05_gestos_mobile/d_movimiento/) - [editar](https://editor.p5js.org/laurajunco/sketches/BJ2ziavyz)
   
 4. Tiempo
-  * [Simple](https://disenomediosinteractivos.github.io/Ejemplos/05_gestos_mobile/e_tiempo_simple/) - [editar]()
+  * [Simple](https://disenomediosinteractivos.github.io/Ejemplos/05_gestos_mobile/e_tiempo_simple/) - [editar](https://editor.p5js.org/laurajunco/sketches/HJNTa7dcX)
   * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/05_gestos_mobile/e_tiempo/) - [editar](https://editor.p5js.org/laurajunco/sketches/S1TmXKDyG)
   
 5. Aceleración 
-  * [Simple](https://disenomediosinteractivos.github.io/Ejemplos/05_gestos_mobile/f_aceleracion_simple/) - [editar]()
+  * [Simple](https://disenomediosinteractivos.github.io/Ejemplos/05_gestos_mobile/f_aceleracion_simple/) - [editar](https://editor.p5js.org/laurajunco/sketches/Bk2cAX_qm)
   * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/05_gestos_mobile/f_aceleracion/) - [editar](https://editor.p5js.org/laurajunco/sketches/rJD8F0vyz)
 
 ### Geolocalización

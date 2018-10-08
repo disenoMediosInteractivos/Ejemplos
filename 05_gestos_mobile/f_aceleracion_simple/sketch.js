@@ -26,6 +26,8 @@ function draw() {
   fill(r, g, b);
 
   //pinta una elipse
+  stroke(255);
+  strokeWeight(3);
   ellipse(width/2, height/2, width/4, width/4);
 }
 

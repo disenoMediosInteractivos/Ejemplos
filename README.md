@@ -45,15 +45,15 @@
   * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/05_gestos_mobile/f_aceleracion/) - [editar](https://editor.p5js.org/laurajunco/sketches/rJD8F0vyz)
 
 ### Geolocalización
-1. [Configuración simple](https://disenomediosinteractivos.github.io/ejemplos/06_geolocation/01_setup)
-2. [Configuración movimiento](https://disenomediosinteractivos.github.io/ejemplos/06_geolocation/01_2_motion)
-2. [Mapa](https://disenomediosinteractivos.github.io/ejemplos/06_geolocation/02_map/)
-3. [Distancias](https://disenomediosinteractivos.github.io/ejemplos/06_geolocation/03_distance/)
+1. [Configuración simple](https://disenomediosinteractivos.github.io/Ejemplos/06_geolocation/01_setup)
+2. [Configuración movimiento](https://disenomediosinteractivos.github.io/Ejemplos/06_geolocation/01_2_motion)
+2. [Mapa](https://disenomediosinteractivos.github.io/Ejemplos/06_geolocation/02_map/)
+3. [Distancias](https://disenomediosinteractivos.github.io/Ejemplos/06_geolocation/03_distance/)
 
 ### Cámara y visión
-1. [Configuración](https://disenomediosinteractivos.github.io/ejemplos/07_camera/01_setup/)
-2. [Detectar movimiento](https://disenomediosinteractivos.github.io/ejemplos/07_camera/03_motion/)
-3. [Detectar color](https://disenomediosinteractivos.github.io/ejemplos/07_camera/02_color_tracking/)
-4. [Detectar caras](https://disenomediosinteractivos.github.io/ejemplos/07_camera/04_face_tracking/)
-5. [Detectar expresiones](https://disenomediosinteractivos.github.io/ejemplos/07_camera/05_expression_detection/)
+1. [Configuración](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/01_setup/)
+2. [Detectar movimiento](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/03_motion/)
+3. [Detectar color](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/02_color_tracking/)
+4. [Detectar caras](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/04_face_tracking/)
+5. [Detectar expresiones](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/05_expression_detection/)
 

@@ -1,38 +1,37 @@
-var locationData;
-
-function preload() {
-  locationData =  getCurrentPosition();
-}
+var lat;
+var lng;
+var accuracy;
+var altitude;
+var altitudeAccuracy;
+var heading;
+var speed;
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight);
+  background(225);
+	textSize(20);
+  console.log("GeoCheck: " + geoCheck());
+  watchPosition(doThisOnLocation);
+}
 
-  if (geoCheck() == true) {
-    background(225,255,255);
-    watchPosition(positionChanged);
+function doThisOnLocation(position) {
+  lat = position.latitude;
+  lng = position.longitude;
+  accuracy = position.accuracy;
+  altitudeAccuracy = position.altitudeAccuracy;
+  heading = position.heading;
+  speed = position.speed;
 
-    text("lat: " + locationData.latitude, 10, 20);
-    text("long: " + locationData.longitude, 10, 40);
-    text("accuracy: " + locationData.accuracy, 10, 60);
-    text("altitude: " + locationData.altitude, 10, 80);
-    text("altitudeAccuracy: " + locationData.altitudeAccuracy, 10, 100);
-    text("heading: " + locationData.heading, 10, 120);
-    text("speed: " + locationData.speed, 10, 140);
-  } else {
-    background(0);
-  }
 }
 
 function draw() {
-}
+  background(255);
 
-function positionChanged(locationData) {
-  background(random(255));
-  text("lat: " + locationData.latitude, 10, 20);
-  text("long: " + locationData.longitude, 10, 40);
-  text("accuracy: " + locationData.accuracy, 10, 60);
-  text("altitude: " + locationData.altitude, 10, 80);
-  text("altitudeAccuracy: " + locationData.altitudeAccuracy, 10, 100);
-  text("heading: " + locationData.heading, 10, 120);
-  text("speed: " + locationData.speed, 10, 140);
+  text("Latitude: " + lat, 10, 30);
+  text("Longitude: " + lng, 10, 60);
+  text("Accuracy: " + accuracy, 10, 90);
+  text("Altitude accuracy: " + altitudeAccuracy, 10, 120);
+  text("Heading: " + heading, 10, 150);
+  text("Speed: " + speed, 10, 180);
+
 }

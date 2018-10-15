@@ -46,9 +46,11 @@
 
 ### Geolocalización
 1. [Configuración](https://disenomediosinteractivos.github.io/Ejemplos/06_geolocation/01_setup/)
-2. [distancia](https://disenomediosinteractivos.github.io/Ejemplos/06_geolocation/02_distance/)
+2. [Distancia](https://disenomediosinteractivos.github.io/Ejemplos/06_geolocation/02_distance/)
 3. [Mapa](https://disenomediosinteractivos.github.io/Ejemplos/06_geolocation/03_map/)
-4. [Distancias](https://disenomediosinteractivos.github.io/Ejemplos/06_geolocation/04_distance_map/)
+4. [Visualizar distancias](https://disenomediosinteractivos.github.io/Ejemplos/06_geolocation/04_distance_map/)
+5. Velocidad (muy Pronto)
+6. Dirección (muy Pronto)
 
 ### Cámara y visión
 1. [Configuración](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/01_setup/)

@@ -45,10 +45,10 @@
   * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/05_gestos_mobile/f_aceleracion/) - [editar](https://editor.p5js.org/laurajunco/sketches/rJD8F0vyz)
 
 ### Geolocalización
-1. [Configuración simple](https://disenomediosinteractivos.github.io/Ejemplos/06_geolocation/01_setup)
-2. [Configuración movimiento](https://disenomediosinteractivos.github.io/Ejemplos/06_geolocation/01_2_motion)
-2. [Mapa](https://disenomediosinteractivos.github.io/Ejemplos/06_geolocation/02_map/)
-3. [Distancias](https://disenomediosinteractivos.github.io/Ejemplos/06_geolocation/03_distance/)
+1. [Configuración](https://disenomediosinteractivos.github.io/Ejemplos/06_geolocation/01_setup/)
+2. [distancia](https://disenomediosinteractivos.github.io/Ejemplos/06_geolocation/02_distance/)
+3. [Mapa](https://disenomediosinteractivos.github.io/Ejemplos/06_geolocation/03_map/)
+4. [Distancias](https://disenomediosinteractivos.github.io/Ejemplos/06_geolocation/04_distance_map/)
 
 ### Cámara y visión
 1. [Configuración](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/01_setup/)

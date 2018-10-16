@@ -8,11 +8,16 @@ var speed; //variable para guardar la rapidez
 
 function setup() {
 
-  createCanvas(windowWidth, windowHeight); //crea un canvas de pantalla completa
+  //crea un canvas de pantalla completa
+  createCanvas(windowWidth, windowHeight);
   background(225);
 	textSize(20);
-  console.log("GeoCheck: " + geoCheck()); //Si geoCheck es true es que es posible medir la posicion del dispositivo
-  watchPosition(doThisOnLocation); //Se llama a la función doThisOnLocation cada vez que cambie la posicion del usuario
+
+  //Si geoCheck es true es que es posible medir la posicion del dispositivo
+  console.log("GeoCheck: " + geoCheck());
+
+  //Se llama a la función doThisOnLocation cada vez que cambie la posicion del usuario
+  watchPosition(doThisOnLocation);
 }
 
 //Esta función es llamada por watchPosition cada vez que cambia la posicion del usuario

@@ -15,8 +15,8 @@ var isClose = false; //variable para saber si se está cerca a alguno de los pun
 function setup() {
   //crea un canvas de pantalla completa
   createCanvas(windowWidth, windowHeight);
-  background(225);
-	textSize(20);
+  fill(255);
+	textSize(32);
 
   //Si geoCheck es true es que es posible medir la posicion del dispositivo
   console.log("GeoCheck: " + geoCheck());

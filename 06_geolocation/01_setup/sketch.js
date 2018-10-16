@@ -1,20 +1,25 @@
-var lat;
-var lng;
-var accuracy;
-var altitude;
-var altitudeAccuracy;
-var heading;
-var speed;
+var lat; //variable para guardar la latitud
+var lng; //variable para guardar la longitud
+var accuracy; //variable para guardar la precisión
+var altitude; //variable para guardar la altitud
+var altitudeAccuracy; //variable para guardar la presición en altitud
+var heading; //variable para guardar la dirección
+var speed; //variable para guardar la rapidez
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+
+  createCanvas(windowWidth, windowHeight); //crea un canvas de pantalla completa
   background(225);
 	textSize(20);
-  console.log("GeoCheck: " + geoCheck());
-  watchPosition(doThisOnLocation);
+  console.log("GeoCheck: " + geoCheck()); //Si geoCheck es true es que es posible medir la posicion del dispositivo
+  watchPosition(doThisOnLocation); //Se llama a la función doThisOnLocation cada vez que cambie la posicion del usuario
 }
 
+//Esta función es llamada por watchPosition cada vez que cambia la posicion del usuario
+//La variable position es un objeto con los datos de localizacion del dispositivo
 function doThisOnLocation(position) {
+
+  //toma la posicion del dispositivo y asigna valores a las variables de posicion
   lat = position.latitude;
   lng = position.longitude;
   accuracy = position.accuracy;
@@ -27,6 +32,7 @@ function doThisOnLocation(position) {
 function draw() {
   background(255);
 
+  //dibuja en la pantalla los valores de posición obtenidos
   text("Latitude: " + lat, 10, 30);
   text("Longitude: " + lng, 10, 60);
   text("Accuracy: " + accuracy, 10, 90);

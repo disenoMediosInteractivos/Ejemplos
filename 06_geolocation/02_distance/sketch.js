@@ -1,11 +1,16 @@
-var distance = 0;
-var currentLat = 0;
-var currentLon = 0;
+var currentLat;
+var currentLon;
 
-var boboLat = 4.601220206709155;
-var boboLon = -74.06554860994221;
+var boboLat = 4.601215765889439;
+var boboLon = -74.06554536195473;
 
-var isInside = false;
+var richardLat = 4.601611411584872;
+var richardLon = -74.06404292676599;
+
+var distanceRichard;
+var distanceBobo;
+
+var isClose = false;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -14,8 +19,6 @@ function setup() {
 
   print("GeoCheck: " + geoCheck());
   watchPosition(doThisOnLocation);
-  geoFenceCircle(boboLat, boboLon, 0.005, insideTheFence, outsideTheFence, 'km');
-
 }
 
 function doThisOnLocation(position) {
@@ -24,27 +27,18 @@ function doThisOnLocation(position) {
   currentLon = position.longitude;
 }
 
-function insideTheFence(position) {
-  print("INlat: " + position.latitude + " INlong: " + position.longitude);
-  print("outside of the fence");
-  isInside = true;
-}
-
-function outsideTheFence(position) {
-  print("OUTlat: " + position.latitude + " OUTlong: " + position.longitude);
-  print("outside of the fence");
-  isInside = false;
-  //setup();
-}
-
 function draw() {
-  distance = calcGeoDistance(boboLat, boboLon, currentLat, currentLon, 'km');
+  distanceRichard = calcGeoDistance(richardLat, richardLon, currentLat, currentLon, 'km')*1000;
+  distanceBobo = calcGeoDistance(boboLat, boboLon, currentLat, currentLon, 'km')*1000;
 
-  if (isInside) {
-    background(0, 0, 255);
+  if (distanceRichard < 20 || distanceBobo < 20) {
+    isClose = true;
+    background(0, 255, 0);
   } else {
+    isClose = false;
     background(255, 0, 0);
   }
 
-  text('Te encuentras a ' + floor(distance * 1000) + ' metros del Bobo', 20, 50);
+  text('Te encuentras a ' + floor(distanceRichard) + ' metros de la plazoleta del R', 20, 50);
+  text('Te encuentras a ' + floor(distanceBobo) + ' metros del Bobo', 20, 100);
 }

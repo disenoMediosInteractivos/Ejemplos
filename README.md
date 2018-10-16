@@ -47,7 +47,7 @@
 ### Geolocalización
 1. [Configuración](https://disenomediosinteractivos.github.io/Ejemplos/06_geolocation/01_setup/) - [editar](https://editor.p5js.org/laurajunco/sketches/SkpZSJO_X)
 2. [Distancia](https://disenomediosinteractivos.github.io/Ejemplos/06_geolocation/02_distance/) - [editar](https://editor.p5js.org/laurajunco/sketches/r15n2PbjX)
-3. [Mapa](https://disenomediosinteractivos.github.io/Ejemplos/06_geolocation/03_map/) - [editar](https://editor.p5js.org/full/ryKCPWOdX)
+3. [Mapa](https://disenomediosinteractivos.github.io/Ejemplos/06_geolocation/03_map/) - [editar](https://editor.p5js.org/laurajunco/sketches/ryKCPWOdX)
 4. [Visualizar distancias](https://disenomediosinteractivos.github.io/Ejemplos/06_geolocation/04_distance_map/) - [editar](https://editor.p5js.org/laurajunco/sketches/BkgWGKfsX)
 
 ### Cámara y visión

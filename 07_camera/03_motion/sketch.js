@@ -1,87 +1,77 @@
 var capture;
-var previousPixels;
-
 var w = 640;
 var h = 480;
 
-var thresholdAmount = 25;
+var r, g, b;
+var ar, ag, ab;
 
-var captureArgs = {
-  audio: false,
-  video: {
-    width: w,
-    height: h
-  }
-}
+var tol = 25;
+
+var pixelesAnteriores;
 
 function setup() {
-    capture = createCapture(captureArgs, function() {
-        console.log('captura lista :)')
-    });
+    pixelDensity(1);
+    capture = createCapture(VIDEO);
 
     capture.size(w, h);
-    pixelDensity(1);
     createCanvas(w, h);
     capture.hide();
 }
 
 function draw() {
-    capture.loadPixels();
+  capture.loadPixels();
+  loadPixels();
+  var total = 0;
 
-    var total = 0;
+  if (capture.pixels.length > 0) {
 
-    if (capture.pixels.length > 0) { // don't forget this!
-        if (!previousPixels) {
-            previousPixels = copyImage(capture.pixels, previousPixels);
-        } else {
-                w = capture.width;
-                h = capture.height;
-            var i = 0;
-            var pixels = capture.pixels;
+    if(!pixelesAnteriores) {
 
+      pixelesAnteriores = capture.pixels;
 
-            for (var y = 0; y < h; y++) {
+    } else {
 
-                for (var x = 0; x < w; x++) {
+      for (var y = 0; y < h; y++) {
 
-                    // calculate the differences
-                    var rdiff = Math.abs(pixels[i + 0] - previousPixels[i + 0]);
-                    var gdiff = Math.abs(pixels[i + 1] - previousPixels[i + 1]);
-                    var bdiff = Math.abs(pixels[i + 2] - previousPixels[i + 2]);
-                    // copy the current pixels to previousPixels
-                    previousPixels[i + 0] = pixels[i + 0];
-                    previousPixels[i + 1] = pixels[i + 1];
-                    previousPixels[i + 2] = pixels[i + 2];
-                    var diffs = rdiff + gdiff + bdiff;
-                    var output = 0;
+        for (var x = 0; x < w; x++) {
 
-                    if (diffs/3 > thresholdAmount) {
-                        output = 255;
-                        total += diffs;
-                    }
-                    pixels[i++] = output;
-                    pixels[i++] = output;
-                    pixels[i++] = output;
-                    pixels[i++];
+          var i = (x + y * w) * 4;
 
-                }
-            }
+          r = capture.pixels[i + 0];
+          g = capture.pixels[i + 1];
+          b = capture.pixels[i + 2];
+
+          ar = pixelesAnteriores[i + 0];
+          ag = pixelesAnteriores[i + 1];
+          ab = pixelesAnteriores[i + 2];
+
+          var aBrillo = (ar + ag + ab)/3;
+          var brillo = (r+g+b)/3;
+
+          if(abs(aBrillo - brillo) > tol) {
+
+            total++;
+
+            pixels[i + 0] = 255;
+            pixels[i + 1] = 255;
+            pixels[i + 2] = 0;
+            pixels[i + 3] = 255;
+
+          } else {
+
+            pixels[i + 0] = 255;
+            pixels[i + 1] = 0;
+            pixels[i + 2] = 0;
+            pixels[i + 3] = 255;
+          }
         }
-    }
-    // need this because sometimes the frames are repeated
-    if (total > 0) {
-        capture.updatePixels();
-        image(capture, 0, 0, 640, 480);
-    }
-}
+      }
 
-function copyImage(src, dst) {
-    var n = src.length;
-    if (!dst || dst.length != n) {
-        dst = new src.constructor(n);
+      if (total > 0) { //hay que poner esto porque a veces los frames se repiten
+        updatePixels();
+      }
+
+      pixelesAnteriores = capture.pixels;
     }
-    while (n--) {
-        dst[n] = src[n];
-    }
-    return dst;
+  }
 }

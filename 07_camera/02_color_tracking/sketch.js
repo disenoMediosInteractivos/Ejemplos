@@ -8,15 +8,7 @@ var rojo;
 var verde;
 var azul;
 var col;
-var rango = 25;
-
-var captureArgs = {
-  audio: false,
-  video: {
-    width: w,
-    height: h
-  }
-}
+var rango = 30;
 
 function obtenerColor(r, g, b) {
   rojo = r;
@@ -26,18 +18,17 @@ function obtenerColor(r, g, b) {
 }
 
 function setup() {
-    capture = createCapture(captureArgs, function() {
-        console.log('captura lista :)')
-    });
+    capture = createCapture(VIDEO);
 
     capture.size(w, h);
     pixelDensity(1);
-    canvas= createCanvas(w, h);
+    canvas = createCanvas(w, h);
 
     capture.parent('container');
     canvas.parent('container');
 
     obtenerColor(255, 255, 255);
+    
     tracking.ColorTracker.registerColor('seleccion', function(r, g, b) {
     if (r >= rojo - rango && r <= rojo + rango &&
         g >= verde - rango && g <= verde + rango &&

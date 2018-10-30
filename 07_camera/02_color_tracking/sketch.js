@@ -9,7 +9,7 @@ var rojo; //variabla para guardar el rojo
 var verde; //variabla para guardar el verde
 var azul; //variabla para guardar el azul
 var col; //variabla para guardar el color elegido
-var rango = 10; //rango de tolerancia de color
+var rango = 20; //rango de tolerancia de color
 
 //variables para pintar un rectangulo
 var x;
@@ -106,7 +106,7 @@ function activarTracking() {
 
       //variable para guardar el mayor tamaño del grupo de pixeles encontrado
       var mayorTam = 0
-      
+
       if ( r.width * r.height > mayorTam) { //solo si el grupo actual es el más grande
         mayorTam = r.width * r.height; //actualiza el tamaño mayor
 

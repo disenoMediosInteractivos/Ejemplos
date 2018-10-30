@@ -1,20 +1,25 @@
-var capture;
-var w = 640;
-var h = 480;
+var capture; //variable para guardar la captura
+var w = 640; //ancho
+var h = 480; //alto
 
 function setup() {
+    //Define la densidad de pixeles para que la imagen sea igual en todos los dispositivos
     pixelDensity(1);
-    capture = createCapture(VIDEO);
+    capture = createCapture(VIDEO); //crea una captura de video
 
-    capture.size(w, h);
-    createCanvas(w, h);
-    capture.hide();
+    capture.size(w, h); //definde el tamaño de la captura
+    createCanvas(w, h); //crea un canvas del tamaño de la captura
+    capture.hide(); //esconde la captura
 }
 
 function draw() {
-    image(capture, 0, 0, w, h);
-    capture.loadPixels();
+    image(capture, 0, 0, w, h); //dibuja una imagen con los pixeles recibidos de la camara
+    capture.loadPixels(); //carga los pixeles de la captura
 
+    // si la cámara esta captando alguna imagen
     if (capture.pixels.length > 0) {
+
+      // su código acá
+      
     }
 }

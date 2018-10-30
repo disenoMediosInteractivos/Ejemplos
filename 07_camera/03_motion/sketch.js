@@ -20,7 +20,6 @@ function setup() {
 }
 
 function draw() {
-
   capture.loadPixels(); //carga los pixeles de la captura
   loadPixels(); //carga los pixeles del canvas
   var total = 0; //variable para guardar el numero de pixeles que cambiaron
@@ -83,8 +82,14 @@ function draw() {
       //(a veces los frames se repiten)
       if (total > 0) {
         updatePixels(); //actualiza los pixeles del canvas
+        fill(255);
+        textSize(20);
+        var area = w*h; // calcula area del canvas
+        var mov = (total / area) * 100; //calcula el porcentaje de pixeles en movimiento
+        //texto
+        text("Porcentaje de movimiento = " + floor(mov) + "%", 20, 40);
       }
-      
+
       //guarda los pixeles actuales en la variable de pixeles anteriores
       pixelesAnteriores = capture.pixels;
     }

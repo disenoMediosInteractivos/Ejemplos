@@ -4,6 +4,13 @@ var tracker;
 var w = 640;
 var h = 480;
 
+var x;
+var y;
+var rw;
+var rh;
+
+var rec;
+
 var captureArgs = {
   audio: false,
   video: {
@@ -24,10 +31,38 @@ function setup() {
   capture.parent('container');
   canvas.parent('container');
 
+  activarTracking();
+
+  rec = new rec();
+}
+
+function draw() {
+  strokeWeight(2);
+  stroke(255, 255, 0);
+  noFill();
+  rect(rec.x, rec.y, rec.w, rec.h);
+}
+
+function rec(){
+  this.x = -10;
+  this.y = -10;
+  this.w = 0;
+  this.h = 0;
+
+  this.mover = function(x, y, w, h){
+    this.x = x;
+    this.y = y;
+    this.w = w;
+    this.h = h;
+  }
+}
+
+function activarTracking() {
   tracker = new tracking.ObjectTracker(['face']);
   capture.elt.id = 'p5video';
   tracker.setInitialScale(4);
-  tracker.setStepSize(2);
+  tracker.setStepSize(1);
+  tracker.setEdgesDensity(0.05);
 
   tracking.track('#p5video', tracker, {
        camera: true
@@ -35,14 +70,8 @@ function setup() {
 
   tracker.on('track', function (event) {
     clear();
-    strokeWeight(2);
-    stroke(255, 0, 255);
-    noFill();
     event.data.forEach(function (r) {
-        rect(r.x, r.y, r.width, r.height);
+      rec.mover(r.x, r.y, r.width, r.height);
     })
   });
 }
-
-//need to finish this example: create a class for the face rectangle
-//and move it instead of create it every time

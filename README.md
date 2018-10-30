@@ -52,10 +52,7 @@
 
 ### Cámara y visión
 1. [Configuración](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/01_setup/)
-2. [Detectar movimiento](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/03_motion/)
-3. [Detectar movimiento - elipse](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/03_motion2/)
-4. [Detectar color](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/02_color_tracking/)
-5. [Detectar color - Paint](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/02_color_tracking2/)
-6. [Detectar caras](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/04_face_tracking/)
-7. [Detectar expresiones](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/05_expression_detections/)
-8. [Medir sonrisa](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/05_expression_detection/)
+2. [Detectar movimiento](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/02_motion/) – [elipse](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/02_motion_elipse/)
+3. [Detectar color](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/03_color_tracking/) - [pintar](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/03_color_tracking_paint/)
+4. [Detectar caras](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/04_face_tracking/)
+5. [Detectar expresiones](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/05_expression_detection/) - [medir sonrisas](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/05_expression_detection_smile/)

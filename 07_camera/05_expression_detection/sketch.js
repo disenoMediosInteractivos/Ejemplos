@@ -31,27 +31,6 @@ function draw() {
     //la dibuja
     dibujarCara(positions);
 
-    /*
-    / MEDICIÓN DE SONRISA :)
-    */
-
-    //los puntos 44 y 50 son las dos esquinas de la cara
-    var leftX = positions[44][0]; //posicion x izq
-    var leftY = positions[44][1]; //posicion y izq
-
-    var RightX = positions[50][0]; //posicion x der
-    var RightY = positions[50][1]; //posicion y der
-
-    //mide la distancia entre las dos esquinas de la cara
-    var sonrisa = dist(leftX, leftY, RightX, RightY);
-
-    //dibuja un rectangulo con el nivel de sonrisa
-    noStroke();
-    fill(0, 255, 0);
-    textSize(24);
-    text("Nivel de felicidad :)", 20, 40)
-    sonrisa = map(sonrisa, 45, 70, 5, width - 60); //mapea el largo del rectangulo
-    rect(20, 60, sonrisa, 20);
   }
 }
 

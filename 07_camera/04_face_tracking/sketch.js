@@ -1,60 +1,36 @@
-var capture;
-var tracker;
+var capture; // variable para guardar la captura
+var tracker; // variable para guardar el tracker
+var canvas;  // variable para guardar el canvas
 
-var w = 640;
-var h = 480;
+var w = 640; //ancho
+var h = 480; //alto
 
-var x;
-var y;
-var rw;
-var rh;
-
-var rec;
-
-var captureArgs = {
-  audio: false,
-  video: {
-    width: w,
-    height: h
-  }
-}
+var rec; //variable para guardar el cuadrado que se va a dibujar
 
 function setup() {
-  capture = createCapture(captureArgs, function() {
-      console.log('captura lista :)')
-  });
-
-  capture.size(w, h);
+  
+  //Define la densidad de pixeles para que la imagen sea igual en todos los dispositivos
   pixelDensity(1);
-  canvas= createCanvas(w, h);
+  capture = createCapture(VIDEO); //crea una captura de video
 
-  capture.parent('container');
-  canvas.parent('container');
+  capture.size(w, h); //define el tamaño de la captura
+  canvas = createCanvas(w, h); //crea un canvas del tamaño de la captura
 
-  activarTracking();
+  capture.parent('container'); //incluye a la captura dentro del elemento 'container'
+  canvas.parent('container'); //incluye al canvas dentro del elemento 'container'
 
-  rec = new rec();
+  activarTracking(); //activa el tracking de caras
+
+  rec = new rec(); //inicializa rec como objeto de tipo rec()
 }
 
 function draw() {
+
+  //dibuja un rectangulo en la posición de rec
   strokeWeight(2);
   stroke(255, 255, 0);
   noFill();
   rect(rec.x, rec.y, rec.w, rec.h);
-}
-
-function rec(){
-  this.x = -10;
-  this.y = -10;
-  this.w = 0;
-  this.h = 0;
-
-  this.mover = function(x, y, w, h){
-    this.x = x;
-    this.y = y;
-    this.w = w;
-    this.h = h;
-  }
 }
 
 function activarTracking() {
@@ -68,10 +44,39 @@ function activarTracking() {
        camera: true
    });
 
+   /*
+   / Esta es la parte importante!!!!
+   /cada vez que se detecte una cara
+   / se lanza un evento
+   / y se devuele un objeto con x, y, alto y ancho
+   */
+
   tracker.on('track', function (event) {
-    clear();
-    event.data.forEach(function (r) {
+    clear(); //se eliminan los eventos anteriores
+
+    event.data.forEach(function (r) { //recorre la lista de grupos encontrados
+
+      //actualiza la posicion del cuadrado
       rec.mover(r.x, r.y, r.width, r.height);
+
     })
   });
+}
+
+//funcion rec
+function rec(){
+
+  //inicia la posicion y dimensiones de un cuadrado
+  this.x = -10;
+  this.y = -10;
+  this.w = 0;
+  this.h = 0;
+
+  //esta funcion actualiza las dimensiones y posicion de un cuadrado
+  this.mover = function(x, y, w, h){
+    this.x = x;
+    this.y = y;
+    this.w = w;
+    this.h = h;
+  }
 }

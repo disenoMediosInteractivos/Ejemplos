@@ -11,6 +11,11 @@ var azul; //variabla para guardar el azul
 var col; //variabla para guardar el color elegido
 var rango = 10; //rango de tolerancia de color
 
+var x;
+var y;
+var rw;
+var rh;
+
 function setup() {
   //Define la densidad de pixeles para que la imagen sea igual en todos los dispositivos
   pixelDensity(1);
@@ -44,6 +49,13 @@ function obtenerColor(r, g, b) {
   col = color(rojo, verde, azul);
 }
 
+function draw() {
+  stroke(col);
+  noFill();
+  strokeWeight(2);
+  rect(x, y, rw, rh);
+}
+
 function activarTracking() {
 
   //Revisa si hay pixeles del color seleccionado
@@ -71,11 +83,15 @@ function activarTracking() {
 
   tracker.on('track', function (event) {
     clear();
-    strokeWeight(2);
-    stroke(col);
-    noFill();
+    var mayorTam = 0
     event.data.forEach(function (r) {
-        rect(r.x, r.y, r.width, r.height);
+      if ( r.width * r.height > mayorTam) {
+        mayorTam = r.width * r.height;
+        x = r.x;
+        y = r.y;
+        rw = r.width;
+        rh = r.height;
+      }
     })
   });
 }

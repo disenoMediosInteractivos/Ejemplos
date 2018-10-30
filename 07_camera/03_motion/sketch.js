@@ -14,7 +14,7 @@ function setup() {
   pixelDensity(1);
   capture = createCapture(VIDEO); //crea una captura de video
 
-  capture.size(w, h); //definde el tamaño de la captura
+  capture.size(w, h); //define el tamaño de la captura
   createCanvas(w, h); //crea un canvas del tamaño de la captura
   capture.hide(); //esconde la captura
 }

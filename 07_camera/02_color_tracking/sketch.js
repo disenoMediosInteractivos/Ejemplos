@@ -58,7 +58,7 @@ function draw() {
   //se pinta un rectangulo con las dimensiones y el lugar recibido
   stroke(col);
   noFill();
-  strokeWeight(2);
+  strokeWeight(3);
   rect(x, y, rw, rh);
 }
 

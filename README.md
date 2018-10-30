@@ -13,7 +13,7 @@
   * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/04_lanzar) – [editar](https://editor.p5js.org/laurajunco/sketches/Skjpy50AW)
 
 4. Clics por minuto
-  * [Simple](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/03_clics%20por%20segundo%20simple/) – [editar](https://editor.p5js.org/laurajunco/sketches/r14Qmhz9m
+  * [Simple](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/03_clics%20por%20segundo%20simple/) – [editar](https://editor.p5js.org/laurajunco/sketches/r14Qmhz9m)
   * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/03_clics%20por%20segundo/) – [editar](https://editor.p5js.org/laurajunco/sketches/S1dBY5RRW)
 
 5. Tamaño de la ventana

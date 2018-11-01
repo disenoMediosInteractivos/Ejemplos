@@ -6,8 +6,9 @@ var w = 640; //ancho
 var h = 480; //alto
 
 var rec; //variable para guardar el cuadrado que se va a dibujar
-
 var img; //variable para guardar imagen
+
+var caraDetec = false;
 
 function preload(){
   img = loadImage('emoji_01.png'); //carga el archivo de imagen
@@ -31,8 +32,11 @@ function setup() {
 
 function draw() {
 
-  //dibuja una imagen en la posición de la cara
-  image(img, rec.x, rec.y, rec.w, rec.h);
+  //si reconoce una cara
+  if (caraDetec){
+    //dibuja una imagen en la posición de la cara
+    image(img, rec.x, rec.y, rec.w, rec.h);
+  }
 }
 
 function activarTracking() {
@@ -54,13 +58,14 @@ function activarTracking() {
    */
 
   tracker.on('track', function (event) {
+    caraDetec = false; //en cada frame vuelve a revisar si hay caras
     clear(); //se eliminan los eventos anteriores
 
     event.data.forEach(function (r) { //recorre la lista de grupos encontrados
 
       //actualiza la posicion del cuadrado
       rec.mover(r.x, r.y, r.width, r.height);
-
+      caraDetec = true; //solo si hay una cara en la pantalla esto es true
     })
   });
 }

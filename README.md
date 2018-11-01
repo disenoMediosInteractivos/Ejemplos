@@ -51,8 +51,15 @@
 4. [Visualizar distancias](https://disenomediosinteractivos.github.io/Ejemplos/06_geolocation/04_distance_map/) – [editar](https://editor.p5js.org/laurajunco/sketches/BkgWGKfsX)
 
 ### Cámara y visión
-1. [Configuración](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/01_setup/)
-2. [Detectar movimiento](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/02_motion/) – [elipse](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/02_motion_elipse/)
-3. [Detectar color](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/03_color_tracking/) – [pintar](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/03_color_tracking_paint/)
-4. [Detectar caras](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/04_face_tracking/)
-5. [Detectar expresiones](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/05_expression_detection/) – [medir sonrisas](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/05_expression_detection_smile/)
+1. [Configuración](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/01_setup/) - [editar](https://editor.p5js.org/laurajunco/sketches/H1InUO9jQ)
+2. Detectar Movimiento
+  * [Base](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/02_motion/)
+  * [Ejemplo](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/02_motion_elipse/)
+3. Detectar color
+  * [Base](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/03_color_tracking/) - [editar](https://editor.p5js.org/laurajunco/sketches/SydD9Fu3m)
+  * [Ejemplo](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/03_color_tracking_paint/) [editar](https://editor.p5js.org/laurajunco/sketches/SJ3L5F_hX)
+4. Detectar caras
+  * [Base](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/04_face_tracking/) - [editar](https://editor.p5js.org/laurajunco/sketches/Bkd39Kd3Q)
+5. Detectar expresiones
+  * [Base](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/05_expression_detection/) - [editar](https://editor.p5js.org/laurajunco/sketches/BykHoKd37)
+  * [Ejemplo](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/05_expression_detection_smile/) - [editar](https://editor.p5js.org/laurajunco/sketches/BJT1nF_2Q)

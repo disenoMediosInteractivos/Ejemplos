@@ -59,7 +59,7 @@
   * [Base](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/03_color_tracking/) - [editar](https://editor.p5js.org/laurajunco/sketches/SydD9Fu3m)
   * [Ejemplo](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/03_color_tracking_paint/) –[editar](https://editor.p5js.org/laurajunco/sketches/SJ3L5F_hX)
 4. Detectar caras
-  * [Base](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/04_face_tracking/) – [editar](https://editor.p5js.org/laurajunco/sketches/Bkd39Kd3Q)
+  * [Base](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/04_face_tracking/) – [editar](https://editor.p5js.org/laurajunco/sketches/SJvrprAhX)
   * [Ejemplo](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/04_face_tracking_emoji/) - [editar](https://editor.p5js.org/laurajunco/sketches/Bkd39Kd3Q)
 5. Detectar expresiones
   * [Base](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/05_expression_detection/) - [editar](https://editor.p5js.org/laurajunco/sketches/BykHoKd37)

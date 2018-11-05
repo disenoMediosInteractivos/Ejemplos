@@ -1,4 +1,5 @@
 var capture; //variable para guardar la captura
+
 var w = 640; //ancho
 var h = 480; //alto
 
@@ -14,12 +15,4 @@ function setup() {
 
 function draw() {
     image(capture, 0, 0, w, h); //dibuja una imagen con los pixeles recibidos de la camara
-    capture.loadPixels(); //carga los pixeles de la captura
-
-    // si la cámara esta captando alguna imagen
-    if (capture.pixels.length > 0) {
-
-      // su código acá
-      
-    }
 }

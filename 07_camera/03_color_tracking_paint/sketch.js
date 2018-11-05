@@ -1,5 +1,5 @@
 var capture; // variable para guardar la captura
-var tracker; // variable para guardar el tracker
+var tracker; // variable para guardar el tracker de color
 var canvas;  // variable para guardar el canvas
 
 var w = 640; //ancho

@@ -51,15 +51,15 @@
 4. [Visualizar distancias](https://disenomediosinteractivos.github.io/Ejemplos/06_geolocation/04_distance_map/) – [editar](https://editor.p5js.org/laurajunco/sketches/BkgWGKfsX)
 
 ### Cámara y visión
-1. [Configuración](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/01_setup/) - [editar](https://editor.p5js.org/laurajunco/sketches/H1InUO9jQ)
+1. [Configuración](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/01_setup/) – [editar](https://editor.p5js.org/laurajunco/sketches/H1InUO9jQ)
 2. Detectar Movimiento
   * [Base](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/02_motion/)
   * [Ejemplo](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/02_motion_elipse/)
 3. Detectar color
   * [Base](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/03_color_tracking/) - [editar](https://editor.p5js.org/laurajunco/sketches/SydD9Fu3m)
-  * [Ejemplo](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/03_color_tracking_paint/) [editar](https://editor.p5js.org/laurajunco/sketches/SJ3L5F_hX)
+  * [Ejemplo](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/03_color_tracking_paint/) –[editar](https://editor.p5js.org/laurajunco/sketches/SJ3L5F_hX)
 4. Detectar caras
-  * [Base](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/04_face_tracking/) - [editar](https://editor.p5js.org/laurajunco/sketches/Bkd39Kd3Q)
+  * [Base](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/04_face_tracking/) – [editar](https://editor.p5js.org/laurajunco/sketches/Bkd39Kd3Q)
   * [Ejemplo](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/04_face_tracking_emoji/) - [editar](https://editor.p5js.org/laurajunco/sketches/Bkd39Kd3Q)
 5. Detectar expresiones
   * [Base](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/05_expression_detection/) - [editar](https://editor.p5js.org/laurajunco/sketches/BykHoKd37)

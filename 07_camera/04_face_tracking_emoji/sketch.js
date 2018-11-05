@@ -8,7 +8,7 @@ var h = 480; //alto
 var rec; //variable para guardar el cuadrado que se va a dibujar
 var img; //variable para guardar imagen
 
-var caraDetec = false;
+var caraDetec = false; //boolean para saber si se detecto una cara
 
 function preload(){
   img = loadImage('emoji_01.png'); //carga el archivo de imagen
@@ -34,6 +34,7 @@ function draw() {
 
   //si reconoce una cara
   if (caraDetec){
+    
     //dibuja una imagen en la posición de la cara
     image(img, rec.x, rec.y, rec.w, rec.h);
   }

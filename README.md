@@ -1,6 +1,7 @@
 # Ejemplos
 
-### Gestos e interacción
+
+## Gestos e interacción
 1. Arrastrar
   * [Simple](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/01_arrastrar%20simple/) – [editar](https://editor.p5js.org/laurajunco/sketches/rkeRM3M5X)
   * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/01_arrastrar) – [editar](https://editor.p5js.org/laurajunco/sketches/SkozlcA0Z)
@@ -24,7 +25,7 @@
   * [Simple](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/02_mouse%20in%20simple/) – [editar](https://editor.p5js.org/laurajunco/sketches/HJoeQhG5Q)
   * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/04_gestos/02_mouse%20in/) – [editar](https://editor.p5js.org/laurajunco/sketches/SyKFXj00Z)
 
-### Gestos e interacción (dispositivos móviles)
+## Gestos e interacción (dispositivos móviles)
 1. Rotación
   * [Simple](https://disenomediosinteractivos.github.io/Ejemplos/05_gestos_mobile/b_rotacion_simple/) – [editar](https://editor.p5js.org/laurajunco/sketches/rJ4jtmucX)
   * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/05_gestos_mobile/b_rotacion/) – [editar](https://editor.p5js.org/laurajunco/sketches/rkbRR5DyG)
@@ -44,13 +45,13 @@
   * [Simple](https://disenomediosinteractivos.github.io/Ejemplos/05_gestos_mobile/f_aceleracion_simple/) – [editar](https://editor.p5js.org/laurajunco/sketches/Bk2cAX_qm)
   * [Avanzado](https://disenomediosinteractivos.github.io/Ejemplos/05_gestos_mobile/f_aceleracion/) – [editar](https://editor.p5js.org/laurajunco/sketches/rJD8F0vyz)
 
-### Geolocalización
+## Geolocalización
 1. [Configuración](https://disenomediosinteractivos.github.io/Ejemplos/06_geolocation/01_setup/) – [editar](https://editor.p5js.org/laurajunco/sketches/SkpZSJO_X)
 2. [Distancia](https://disenomediosinteractivos.github.io/Ejemplos/06_geolocation/02_distance/) – [editar](https://editor.p5js.org/laurajunco/sketches/r15n2PbjX)
 3. [Mapa](https://disenomediosinteractivos.github.io/Ejemplos/06_geolocation/03_map/) – [editar](https://editor.p5js.org/laurajunco/sketches/ryKCPWOdX)
 4. [Visualizar distancias](https://disenomediosinteractivos.github.io/Ejemplos/06_geolocation/04_distance_map/) – [editar](https://editor.p5js.org/laurajunco/sketches/BkgWGKfsX)
 
-### Cámara y visión
+## Cámara y visión
 1. [Configuración](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/01_setup/) – [editar](https://editor.p5js.org/laurajunco/sketches/H1InUO9jQ)
 2. Detectar Movimiento
   * [Base](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/02_motion/)
@@ -59,8 +60,11 @@
   * [Base](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/03_color_tracking/) - [editar](https://editor.p5js.org/laurajunco/sketches/SydD9Fu3m)
   * [Ejemplo](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/03_color_tracking_paint/) –[editar](https://editor.p5js.org/laurajunco/sketches/SJ3L5F_hX)
 4. Detectar caras
-  * [Base](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/04_face_tracking/) – [editar](https://editor.p5js.org/laurajunco/sketches/Bkd39Kd3Q)
+  * [Base](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/04_face_tracking/) – [editar](https://editor.p5js.org/laurajunco/sketches/SJvrprAhX)
   * [Ejemplo](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/04_face_tracking_emoji/) - [editar](https://editor.p5js.org/laurajunco/sketches/Bkd39Kd3Q)
 5. Detectar expresiones
   * [Base](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/05_expression_detection/) - [editar](https://editor.p5js.org/laurajunco/sketches/BykHoKd37)
   * [Ejemplo](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/05_expression_detection_smile/) - [editar](https://editor.p5js.org/laurajunco/sketches/BJT1nF_2Q)
+
+## Multijugador
+1. Configuración

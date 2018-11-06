@@ -21,7 +21,6 @@ function setup() {
   canvas.parent('container'); //incluye al canvas dentro del elemento 'container'
 
   activarTracking(); //activa el tracking para el color seleccionado
-  // background(255, 0, 0);
 
   //texto
   fill(255, 0, 0);
@@ -49,9 +48,7 @@ function activarTracking() {
   capture.elt.id = 'p5video';
 
   //hace el tracking en la captura de la camara
-  tracking.track('#p5video', tracker, {
-       camera: false
-   });
+    tracking.track('video', tracker);
 
   /*
   / Esta es la parte importante!!!!

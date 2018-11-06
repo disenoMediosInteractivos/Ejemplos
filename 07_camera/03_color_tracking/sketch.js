@@ -85,9 +85,7 @@ function activarTracking() {
   capture.elt.id = 'p5video';
 
   //hace el tracking en la captura de la camara
-  tracking.track('#p5video', tracker, {
-       camera: true
-   });
+  tracking.track('video', tracker);
 
   /*
   / Esta es la parte importante!!!!

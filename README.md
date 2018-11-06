@@ -1,4 +1,5 @@
-<center> <h1>Ejemplos</h1> </center>
+# Ejemplos
+
 
 ## Gestos e interacción
 1. Arrastrar

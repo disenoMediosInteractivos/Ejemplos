@@ -64,3 +64,6 @@
 5. Detectar expresiones
   * [Base](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/05_expression_detection/) - [editar](https://editor.p5js.org/laurajunco/sketches/BykHoKd37)
   * [Ejemplo](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/05_expression_detection_smile/) - [editar](https://editor.p5js.org/laurajunco/sketches/BJT1nF_2Q)
+
+###Multijugador
+1. Configuración

@@ -5,7 +5,7 @@ function setup() {
   background(80);
   noStroke();
 
-  socket = io.connect("http://192.168.0.6:3000");
+  socket = io.connect("http://0.0.0.0:3000");
   socket.on('mouse', newDrawing);
 }
 

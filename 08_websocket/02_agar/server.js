@@ -11,9 +11,11 @@ var io = socket(server);
 var players = [];
 
 setInterval(heartbeat, 33);
- function heartbeat() {
-   io.sockets.emit('heartbeat', players);
- }
+
+function heartbeat() {
+
+ io.sockets.emit('heartbeat', players);
+}
 
 function Player(x, y, id) {
 
@@ -31,6 +33,7 @@ function newConnection(socket) {
 
   socket.on('start', start);
   socket.on('update', update);
+  socket.on('disconnecting', disconnect);
 
   //start
   function start(data) {
@@ -43,17 +46,26 @@ function newConnection(socket) {
   //update
   function update(data) {
 
-    var playerToUpdate;
+    for (var i = 0; i < players.length; i++){
+
+      if(players[i] != undefined && socket.id == players[i].id) {
+
+        players[i].x = data.x;
+        players[i].y = data.y;
+      }
+    }
+  }
+
+  //disconnect
+  function disconnect() {
 
     for (var i = 0; i < players.length; i++){
 
-      if(socket.id == players[i].id) {
-
-        playerToUpdate = players[i];
+      if(players[i] != undefined && socket.id == players[i].id) {
+        players.splice(i, 1);
       }
     }
 
-    playerToUpdate.x = data.x;
-    playerToUpdate.y = data.y;
+    console.log(players.length + ' players');
   }
 }

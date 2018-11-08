@@ -18,6 +18,10 @@ function heartbeat() {
  io.sockets.emit('heartbeat', players);
 }
 
+function Display(id) {
+  this.id = id;
+}
+
 function Player(x, y, id) {
 
   this.x = x;
@@ -40,11 +44,22 @@ function newConnection(socket) {
   //start
   function start(data) {
 
-    console.log('display');
+    if (display == undefined) {
 
-    player = new Player(data.x, data.y, socket.id);
-    players.push(player);
-    console.log(players.length + ' players');
+      display = new Display(socket.id);
+      io.to(socket.id).emit('display', true);
+      console.log ('display is set up');
+
+    } else if (display.id != socket.id) {
+
+      socket.broadcast.emit('display', false);
+      console.log ('first client');
+
+      player = new Player(data.x, data.y, socket.id);
+      players.push(player);
+      console.log(players.length + ' players');
+
+    }
   }
 
   //update

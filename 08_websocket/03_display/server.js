@@ -55,7 +55,6 @@ function newConnection(socket) {
 
     if (display.id !== socket.id) {
 
-      socket.broadcast.emit('display', false);
       console.log ('first client');
 
       player = new Player(0, 0, socket.id);

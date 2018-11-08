@@ -1,5 +1,7 @@
 var socket;
-var display;
+var display = false;
+
+var upbtn, downbtn, leftbtn, rightbtn;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -10,8 +12,10 @@ function setup() {
 
   socket.on('display', function(data) {
     display = data;
-    console.log('soy display? ', display);
   });
+
+  upbtn = new Button(width/2, height/4, 'UP');
+  downbtn = new Button(width/2, 3 * height/4, 'UP');
 
 }
 
@@ -24,5 +28,18 @@ function draw() {
 
     //dibujar controles
 
+  }
+}
+
+function Button(x, y, dir){
+  this. x = x;
+  this.y = y;
+  this.dir = dir;
+  this.width = 50;
+
+  function mostrar(){
+    fill(255);
+    rectMode(CENTER);
+    rect(this.x, this.y, tam, tam );
   }
 }

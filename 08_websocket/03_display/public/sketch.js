@@ -9,7 +9,7 @@ var upbtn, downbtn, leftbtn, rightbtn;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   noStroke();
-  var tam = width/5;
+  var tam = Math.min(width, height)/5;
 
   socket = io.connect("http://0.0.0.0:3000");
 
@@ -45,7 +45,7 @@ function Button(x, y, dir){
   this. x = x;
   this.y = y;
   this.dir = dir;
-  this.tam = width/5;
+  this.tam = Math.min(width, height)/5;
 
   this.mostrar = function() {
     fill(255);

@@ -47,15 +47,18 @@ function newConnection(socket) {
     if (display == undefined) {
 
       display = new Display(socket.id);
+
       io.to(socket.id).emit('display', true);
       console.log ('display is set up');
 
-    } else if (display.id != socket.id) {
+    }
+
+    if (display.id !== socket.id) {
 
       socket.broadcast.emit('display', false);
       console.log ('first client');
 
-      player = new Player(data.x, data.y, socket.id);
+      player = new Player(0, 0, socket.id);
       players.push(player);
       console.log(players.length + ' players');
 

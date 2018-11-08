@@ -1,11 +1,16 @@
 var socket;
 var display = false;
+var buttons = [];
+
+
 
 var upbtn, downbtn, leftbtn, rightbtn;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   noStroke();
+  var tam = width/5;
+
   socket = io.connect("http://0.0.0.0:3000");
 
   socket.emit('start');
@@ -14,9 +19,12 @@ function setup() {
     display = data;
   });
 
-  upbtn = new Button(width/2, height/4, 'UP');
-  downbtn = new Button(width/2, 3 * height/4, 'UP');
+  upbtn = new Button(width/2, height/2 - tam, 'UP');
+  downbtn = new Button(width/2, height/2 + tam, 'DOWN');
+  leftbtn = new Button(width/2 - tam, height/2, 'LEFT');
+  rightbtn = new Button(width/2 + tam, height/2, 'RIGHT');
 
+  buttons.push(upbtn, downbtn, leftbtn, rightbtn);
 }
 
 function draw() {
@@ -27,7 +35,9 @@ function draw() {
     background(255, 255, 0);
 
     //dibujar controles
-
+    for ( var i = 0; i < buttons.length; i++) {
+      buttons[i].mostrar();
+    }
   }
 }
 
@@ -35,11 +45,28 @@ function Button(x, y, dir){
   this. x = x;
   this.y = y;
   this.dir = dir;
-  this.width = 50;
+  this.tam = width/5;
 
-  function mostrar(){
+  this.mostrar = function() {
     fill(255);
+    stroke(255, 0, 0);
+    strokeWeight(4);
     rectMode(CENTER);
-    rect(this.x, this.y, tam, tam );
+    rect(this.x, this.y, this.tam, this.tam );
+
+    fill(255, 0, 0);
+    if (this.dir === "UP") {
+      triangle(this.x - this.tam/3, this.y + this.tam/3, this.x, this.y - this.tam/3,
+       this.x + this.tam/3, this.y + this.tam/3);
+    } else if (this.dir === "DOWN") {
+      triangle(this.x - this.tam/3, this.y - this.tam/3, this.x, this.y + this.tam/3,
+       this.x + this.tam/3, this.y - this.tam/3);
+    } else if (this.dir === "LEFT") {
+      triangle(this.x + this.tam/3, this.y - this.tam/3, this.x + this.tam/3, this.y + this.tam/3,
+       this.x - this.tam/3, this.y);
+    } else if (this.dir === "RIGHT") {
+      triangle(this.x - this.tam/3, this.y - this.tam/3, this.x - this.tam/3, this.y + this.tam/3,
+       this.x + this.tam/3, this.y);
+    }
   }
 }

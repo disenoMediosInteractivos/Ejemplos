@@ -29,11 +29,23 @@ function setup() {
     buttons.push(upbtn, downbtn, leftbtn, rightbtn);
   }
 
-  socket.on('heartbeat', function(data) {
-    players = data;
+  socket.on('newPlayer', function(data) {
+    player = data;
+    player = new Player(data.id);
+    players.push(player);
+  });
 
-    for (var i = 0; i < players.length; i++) {
-      players[i] = new Player(players[i].x, players[i].y, players[i].velX, players[i].velY)
+  socket.on('change', function(data) {
+
+    for( var i = 0; i < players.length; i++ )
+    {
+
+      if( players[i].id == data.id ) {
+
+        players[i].velX = data.velX;
+        players[i].velY = data.velY;
+
+      }
     }
 
   });
@@ -50,14 +62,6 @@ function draw() {
       players[i].mostrar();
       players[i].mover();
 
-      data = {
-        x: players[i].x,
-        y: players[i].y,
-        velX: players[i].velX,
-        velY: players[i].velY
-      };
-
-      socket.emit('update', data);
     }
   } else {
 
@@ -83,12 +87,13 @@ function mousePressed() {
   }
 }
 
-function Player(x, y, velx, vely) {
-  this.x = x;
-  this.y = y;
+function Player(id) {
+  this.id = id;
+  this.x = 50;
+  this.y = 50;
   this.tam = 20;
-  this.velX = velx;
-  this.velY = vely;
+  this.velX = 1;
+  this.velY = 0;
 
   this.mostrar = function() {
     fill(0, 255, 0);

@@ -33,6 +33,7 @@ function draw() {
   if (display){
     background(255, 0, 0);
     //dibujar comida y serpientes
+    
   } else {
     background(255, 255, 0);
 

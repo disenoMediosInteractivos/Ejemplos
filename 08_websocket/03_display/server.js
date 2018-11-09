@@ -14,7 +14,6 @@ var players = [];
 setInterval(heartbeat, 33);
 
 function heartbeat() {
-
  io.sockets.emit('heartbeat', players);
 }
 
@@ -23,10 +22,10 @@ function Display(id) {
 }
 
 function Player(x, y, id) {
-
   this.x = x;
   this.y = y;
   this.id = id
+  this.tam = 0;
 }
 
 
@@ -67,7 +66,7 @@ function newConnection(socket) {
   //update
   function update(data) {
 
-    for (var i = 0; i < players.length; i++){
+    for (var i = 0; i < players.length; i++) {
 
       if(players[i] != undefined && socket.id == players[i].id) {
 
@@ -80,9 +79,9 @@ function newConnection(socket) {
   //disconnect
   function disconnect() {
 
-    for (var i = 0; i < players.length; i++){
+    for (var i = 0; i < players.length; i++) {
 
-      if(players[i] != undefined && socket.id == players[i].id) {
+      if ( players[i] != undefined && socket.id == players[i].id) {
         players.splice(i, 1);
       }
     }

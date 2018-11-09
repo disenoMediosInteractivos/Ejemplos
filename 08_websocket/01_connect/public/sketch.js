@@ -1,11 +1,13 @@
 var socket;
+var ip = "http://157.253.148.78:3000"; //change ip
+
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(255);
   noStroke();
 
-  socket = io.connect("http://0.0.0.0:3000");
+  socket = io.connect(ip);
   socket.on('mouse', newDrawing);
 }
 

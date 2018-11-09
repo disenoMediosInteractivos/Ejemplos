@@ -1,10 +1,11 @@
 var socket;
 var players = [];
+var ip = "http://157.253.148.78:3000";
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   noStroke();
-  socket = io.connect("http://0.0.0.0:3000");
+  socket = io.connect(ip);
 
   player = new Player(random(width), random(height));
 

@@ -1,6 +1,7 @@
 var socket;
 var display = false;
 var buttons = [];
+var ip = "http://157.253.148.78:3000";
 
 
 
@@ -11,7 +12,8 @@ function setup() {
   noStroke();
   var tam = Math.min(width, height)/5;
 
-  socket = io.connect("http://0.0.0.0:3000");
+  socket = io.connect(ip);
+  console.log('ip', ip);
 
   socket.emit('start');
 

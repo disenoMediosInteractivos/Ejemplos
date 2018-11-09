@@ -78,7 +78,7 @@ function newConnection(socket) {
         }
 
         data = {
-          id: socket.id, 
+          id: socket.id,
           velX: players[i].velX,
           velY: players[i].velY
         };
@@ -96,6 +96,7 @@ function newConnection(socket) {
 
       if ( players[i] != undefined && socket.id == players[i].id) {
         players.splice(i, 1);
+        io.sockets.emit('deletePlayer', player);
       }
     }
 

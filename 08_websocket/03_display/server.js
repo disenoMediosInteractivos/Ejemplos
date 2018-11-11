@@ -37,6 +37,7 @@ function newConnection(socket) {
 
       display = new Display(socket.id);
       io.to(socket.id).emit('display', true);
+      console.log('display is setup :)');
 
     } else if (display.id !== socket.id) {
 
@@ -92,11 +93,18 @@ function newConnection(socket) {
     for (var i = 0; i < players.length; i++) {
 
       if (players[i] != undefined && socket.id == players[i].id) {
-        
+
         io.sockets.emit('deletePlayer', players[i]);
         players.splice(i, 1);
 
       }
+    }
+
+    if (display != undefined && socket.id == display.id) {
+
+      console.log('display disconnected');
+      server.close();
+      server.close();
     }
 
     console.log(players.length + ' players');

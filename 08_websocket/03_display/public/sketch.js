@@ -6,7 +6,6 @@ var ip = "0.0.0.0:3000"
 var upbtn, downbtn, leftbtn, rightbtn;
 
 function setup() {
-
   createCanvas(windowWidth, windowHeight);
 
   var tam = Math.min(width, height)/5;
@@ -32,22 +31,16 @@ function setup() {
   });
 
   socket.on('deletePlayer', function(data) {
-
     for ( var i = 0; i < players.length; i++){
-
       if ( players[i].id == data.id ) {
-
         players.splice(i, 1);
       }
     }
   });
 
   socket.on('update', function(data) {
-
     for( var i = 0; i < players.length; i++ ) {
-
       if( players[i].id == data.id ) {
-
         players[i].velX = data.velX;
         players[i].velY = data.velY;
       }
@@ -56,19 +49,14 @@ function setup() {
 }
 
 function draw() {
-
   if (display) {
-
     background(0);
 
     for( var i = 0; i < players.length; i++) {
-
       players[i].mostrar();
       players[i].mover();
-
     }
   } else {
-
     background(255, 255, 0);
 
     upbtn.mostrar();
@@ -81,14 +69,11 @@ function draw() {
 function mousePressed() {
 
   for ( var i = 0; i < buttons.length; i++) {
-
     buttons[i].oprimir(mouseX, mouseY);
 
     if(buttons[i].oprimido){
-
       data = buttons[i].dir;
       socket.emit('dir', data);
-
     }
   }
 }

@@ -1,11 +1,13 @@
+//funcion botón
 function Button(x, y, dir){
   this. x = x;
   this.y = y;
-  this.dir = dir;
+  this.dir = dir; //direccion
   this.tam = Math.min(width, height)/5;
   this.col = color(255);
   this.oprimido = false;
 
+  //dibuja al boton
   this.mostrar = function() {
 
     fill(this.col);
@@ -37,6 +39,7 @@ function Button(x, y, dir){
     }
   }
 
+  //revisa si el boton es oprimido
   this.oprimir = function(x, y) {
 
     if( x > this.x - this.tam/2 && x < this.x + this.tam/2 &&

@@ -1,3 +1,4 @@
+//funcion jugador
 function Player(id) {
   this.id = id;
   this.x = 50;
@@ -7,12 +8,14 @@ function Player(id) {
   this.velY = 0;
   this.col = color(random(255), random(255), random(255));
 
+  //muestra al jugador
   this.mostrar = function() {
     noStroke();
     fill(this.col);
     rect(this.x, this.y, this.tam, this.tam);
   }
 
+  //mueve al jugador
   this.mover = function() {
     this.x += this.velX * this.tam;
     this.y += this.velY * this.tam;

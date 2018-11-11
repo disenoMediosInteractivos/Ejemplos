@@ -37,7 +37,7 @@ function newConnection(socket) {
 
   socket.on('start', start); //cuando recibe el mensaje 'start' ejecuta la función start
   socket.on('update', update); //cuando recibe el mensaje 'update' ejecuta la función update
-  socket.on('disconnecting', disconnect); //cuando se desconeta un jugador ejecuta la función disconnect)
+  socket.on('disconnecting', disconnect); //cuando se desconeta un jugador ejecuta la función disconnect
 
   //start
   function start(data) {

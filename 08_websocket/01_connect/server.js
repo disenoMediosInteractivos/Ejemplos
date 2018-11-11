@@ -7,23 +7,22 @@ app.use(express.static('public'));
 
 console.log("socket server is running");
 
-
-var socket = require('socket.io'); //importa la libreria express
+var socket = require('socket.io'); //importa la librería express
 var io = socket(server); //crea un servidor de socket.io
 
-//cada vez que el servidor recibe una nueva conexión llama a la función newConnection
+//cada vez que el servidor recibe una nueva conexión llama a la función 'newConnection'
 io.sockets.on('connection', newConnection)
 
 
-function newConnection(socket) { //'socket' es la información del cliente que se conecto
+function newConnection(socket) { //'socket' es la información del cliente que se conectó
   console.log('new connection ' + socket.id);
 
-  //cuando recibe el mensaje 'mouse' ejecuta la función mouseMessage
+  //cuando recibe el mensaje 'mouse' ejecuta la función 'mouseMessage'
   socket.on('mouse', mouseMessage);
 
-  function mouseMessage(data) { //recibe lso datos del mouse del cliente
+  function mouseMessage(data) { //recibe los datos del mouse del cliente
 
-    //reenvia el mensaje con lso datos a todos los clientes excepto a quien envió el mensaje
+    //reenvia el mensaje con los datos a todos los clientes (excepto a quien envió el mensaje)
     socket.broadcast.emit('mouse', data);
   }
 }

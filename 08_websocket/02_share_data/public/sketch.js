@@ -22,10 +22,10 @@ function setup() {
     y: player.y
   };
 
-  //envia un mensaje al servido con los datos del nuevo jugador
+  //envia un mensaje al servidor con los datos del nuevo jugador
   socket.emit('start', data);
 
-  //recibe datos del servidor constantemente
+  //recibe  constantemente los datos del servidor
   socket.on('heartbeat', function(data){
 
     //recibe la información de los jugadores que existen y sus posiciones
@@ -46,7 +46,7 @@ function draw(){
     y: player.y
   };
 
-  //envia al servidor la información actualizada del jugador
+  //envia la información actualizada del jugador al servidor
   socket.emit('update', data);
 
   //recorre la lista de jugadores existentes
@@ -74,14 +74,14 @@ function Player(x, y) {
     ellipse(this.x, this.y, this.tam, this.tam);
   }
 
-  //mueve al jugador
+  //Mueve al jugador
   this.mover = function() {
 
     //Calcula la diferencia entre el mouse y la posicion del jugador
     var difX = mouseX - this.x;
     var difY = mouseY - this.y;
 
-    //mueve al jugador una fracción de la distancia con el mouse
+    //Mueve al jugador una fracción de la distancia con el mouse
     if(abs(difX) > 1.0) {
       this.x = this.x + difX/32.0;
     }

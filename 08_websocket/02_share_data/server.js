@@ -1,48 +1,48 @@
 var express = require('express');
-var app = express(); //crea una app de express
-var server = app.listen(3000); //inicia un servidor en el puerto 3000
+var app = express(); //Crea una app de express
+var server = app.listen(3000); //Inicia un servidor en el puerto 3000
 
-//muestra en la pagina los contenidos de la carpeta 'public'
+//Muestra en la pagina los contenidos de la carpeta 'public'
 app.use(express.static('public'));
 
 console.log("socket server is running");
 
-var socket = require('socket.io'); //importa la libreria express
+var socket = require('socket.io'); //Importa la librería express
 var io = socket(server); //crea un servidor de socket.io
 
 var players = []; // variable para guardar los jugadores
 
-//cada 33 millisegundos se ejecuta la funcion heartbeat
+//Cada 33 millisegundos se ejecuta la funcion 'heartbeat'
 setInterval(heartbeat, 33);
 
 function heartbeat() {
 
-  //envia a todos los clientes la informacion de los jugadores
+  //Envia a todos los clientes la informacion de los jugadores
  io.sockets.emit('heartbeat', players);
 }
 
-//funcion jugador
+//Función jugador
 function Player(x, y, id) {
   this.x = x; //posicion en x
   this.y = y; //posicion en y
   this.id = id //identificacion
 }
 
-//cada vez que el servidor recibe una nueva conexión llama a la función newConnection
+//Cada vez que el servidor recibe una nueva conexión llama a la función 'newConnection'
 io.sockets.on('connection', newConnection)
 
 function newConnection(socket) {
 
   console.log('new connection ');
 
-  socket.on('start', start); //cuando recibe el mensaje 'start' ejecuta la función start
-  socket.on('update', update); //cuando recibe el mensaje 'update' ejecuta la función update
-  socket.on('disconnecting', disconnect); //cuando se desconeta un jugador ejecuta la función disconnect
+  socket.on('start', start); //cuando recibe el mensaje 'start' ejecuta la función 'start'
+  socket.on('update', update); //cuando recibe el mensaje 'update' ejecuta la función 'update'
+  socket.on('disconnecting', disconnect); //cuando se desconeta un jugador ejecuta la función 'disconnect'
 
   //start
   function start(data) {
 
-    //crea un nuevo jugador con los datos de posicion recibidos y el id del cliente
+    //Crea un nuevo jugador con los datos de posicion recibidos y el id del cliente
     player = new Player(data.x, data.y, socket.id);
     players.push(player); //agrega el jugador a la lista players
     console.log(players.length + ' players');

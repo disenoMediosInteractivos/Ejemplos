@@ -4,7 +4,7 @@ var ip = "http://0.0.0.0:3000"; //dirección ip del dispositivo REEMPLAZAR!!
 var display = false; //variable para saber si se es el display
 var players = []; //lista de jugadores
 var buttons = []; //lista de botones
-var upbtn, downbtn, leftbtn, rightbtn; //botones para mover el cuadro
+var upbtn, downbtn, leftbtn, rightbtn; //botones para mover al jugador
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -18,7 +18,7 @@ function setup() {
 
   buttons.push(upbtn, downbtn, leftbtn, rightbtn);
 
-  //conectar el socket al servidor de la ip del dispositivo
+  //conectar el socket al servidor
   socket = io.connect(ip);
 
   //envia el mensaje start
@@ -29,12 +29,13 @@ function setup() {
 
     //asigna el valor de data a display
     //si es true este sketch sera el display del juego
-    // de lo contrario será un jugador
+    //de lo contrario será un jugador
     display = data;
   });
 
   //cuando recibe el mensaje 'newPlayer' del servidor
   socket.on('newPlayer', function(data) { //data es un objeto de clase jugador
+
     player = data; //guarda la información recibida en una variable
     player = new Player(data.id); //inicializa la variable como un objeto jugador
     players.push(player); //agrega al jugador a la lista de jugadores
@@ -48,6 +49,7 @@ function setup() {
 
       //busca el jugador con el id recibido
       if ( players[i].id == data.id ) {
+
         players.splice(i, 1); //lo elimina de la lista de jugadores
       }
     }
@@ -94,7 +96,7 @@ function draw() {
   }
 }
 
-//cuando el mouse es presionado se ejcuta esta función
+//cuando el mouse es presionado se ejecuta esta función
 function mousePressed() {
 
   //recorre la lista de botones

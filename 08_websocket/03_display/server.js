@@ -10,7 +10,7 @@ console.log("socket server is running");
 var socket = require('socket.io'); //importa la libreria express
 var io = socket(server); //crea un servidor de socket.io
 
-var display; //variable para gaurdar al información del display
+var display; //variable para guardar al información del display
 var players = []; // variable para guardar los jugadores
 
 //funcion display
@@ -25,25 +25,26 @@ function Player(id) {
   this.id = id;
 }
 
-//cada vez que el servidor recibe una nueva conexión llama a la función newConnection
+//cada vez que el servidor recibe una nueva conexión llama a la función 'newConnection'
 io.sockets.on('connection', newConnection);
 
 function newConnection(socket) {
 
-  socket.on('start', start); //cuando recibe el mensaje 'start' ejecuta la función start
-  socket.on('dir', dir); //cuando recibe el mensaje 'dir' ejecuta la función dir
-  socket.on('disconnecting', disconnect); //cuando se desconeta un jugador ejecuta la función disconnect
+  socket.on('start', start); //cuando recibe el mensaje 'start' ejecuta la función 'start'
+  socket.on('dir', dir); //cuando recibe el mensaje 'dir' ejecuta la función 'dir'
+  socket.on('disconnecting', disconnect); //cuando se desconeta un jugador ejecuta la función 'disconnect'
 
 
   //start
   function start(data) {
 
-    //si el display no existe aun
+    //si el display no existe aún
     if (display == undefined) {
 
-      //asigna al primer cliente conectado la funcion de ser el display del juego
+      //asigna al primer cliente conectado la función de ser el display del juego
       display = new Display(socket.id);
-      io.to(socket.id).emit('display', true); //envia al cliente el mensaje display diciendole que es el display
+      io.to(socket.id).emit('display', true); //envia al cliente el mensaje 'display' con valor 'true'
+
       console.log('display is setup :)');
 
     //si el display ya ha sido seleccionado
@@ -57,8 +58,8 @@ function newConnection(socket) {
     }
   }
 
-  //Cambio de dirección, cuando un jugador orpimio un boton de direccion
-  function dir(data) { //data es la direccion del botón orpimido
+  //Cambio de dirección, cuando un jugador oprimió un boton de direccion
+  function dir(data) { //data es la direccion del botón oprimido
 
     //recorre la lista de jugadores
     for (var i = 0; i < players.length; i++) {
@@ -93,9 +94,8 @@ function newConnection(socket) {
 
         };
 
-        //envia la información a todos (pero solo el display la utilizara)
+        //envia la información a todos (pero solo el display la utilizará)
         io.sockets.emit('update', data);
-
       }
     }
   }

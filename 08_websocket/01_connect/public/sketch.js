@@ -13,13 +13,13 @@ function setup() {
   //conectar el socket al servidor de la ip del dispositivo
   socket = io.connect(ip);
 
-  //cuando se reciba el mensaje mouse, se ejecuta la funcion newDrawing
+  //cuando se reciba el mensaje 'mouse', se ejecuta la funcion 'newDrawing'
   socket.on('mouse', newDrawing);
 }
 //esta función se ejecuta cada vez que el mouse se arrastra por la pantalla
 function mouseDragged() {
 
-  //en la variable data se guarda la posición del mouse
+  //en la variable 'data' se guarda la posición del mouse
   var data = {
     x: mouseX,
     y: mouseY
@@ -33,11 +33,11 @@ function mouseDragged() {
   ellipse(mouseX, mouseY, 15, 15);
 }
 
-//se ejecuta cuando recibe el mensaje 'mouse del servidor'
-function newDrawing( data ) { //data son los datos que envia el servidor al socket
+//se ejecuta cuando recibe el mensaje 'mouse' del servidor
+function newDrawing( data ) { //'data' son los datos que envia el servidor al socket
 
   fill(0, 0, 255);
 
-  //dibuja una ellipse en las coordenadas recibidas
+  //dibuja una elipse en las coordenadas recibidas
   ellipse(data.x, data.y, 15, 15)
 }

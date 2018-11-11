@@ -6,6 +6,7 @@ app.use(express.static('public'));
 console.log("socket server is running");
 
 var socket = require('socket.io');
+
 var io = socket(server);
 
 var display;
@@ -21,11 +22,9 @@ function Player(id) {
   this.id = id;
 }
 
-io.sockets.on('connection', newConnection)
+io.sockets.on('connection', newConnection);
 
 function newConnection(socket) {
-
-  console.log('new connection ');
 
   socket.on('start', start);
   socket.on('dir', dir);
@@ -38,17 +37,14 @@ function newConnection(socket) {
 
       display = new Display(socket.id);
       io.to(socket.id).emit('display', true);
-      console.log ('display is set up');
 
-    }
-
-    if (display.id !== socket.id) {
+    } else if (display.id !== socket.id) {
 
       player = new Player(socket.id);
       players.push(player);
-      console.log(players.length + ' players');
       io.sockets.emit('newPlayer', player);
 
+      console.log(players.length + ' players');
     }
   }
 
@@ -81,9 +77,10 @@ function newConnection(socket) {
           id: socket.id,
           velX: players[i].velX,
           velY: players[i].velY
+
         };
 
-        io.sockets.emit('change', data);
+        io.sockets.emit('update', data);
 
       }
     }
@@ -94,9 +91,11 @@ function newConnection(socket) {
 
     for (var i = 0; i < players.length; i++) {
 
-      if ( players[i] != undefined && socket.id == players[i].id) {
+      if (players[i] != undefined && socket.id == players[i].id) {
+        
+        io.sockets.emit('deletePlayer', players[i]);
         players.splice(i, 1);
-        io.sockets.emit('deletePlayer', player);
+
       }
     }
 

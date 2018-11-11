@@ -1,40 +1,59 @@
-var socket;
+var socket; //variable para el socket
+
+//dirección ip del dispositivo
+var ip = "http://0.0.0.0:3000"; //reemplazar!
+
+//variable para guardar los jugadores existentes
 var players = [];
-var ip = "http://157.253.148.78:3000";
+
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  noStroke();
+
+  //conectar el socket al servidor de la ip del dispositivo
   socket = io.connect(ip);
 
+  //crea un jugador
   player = new Player(random(width), random(height));
 
+  //guarda la posicion del jugador
   data = {
     x: player.x,
     y: player.y
   };
 
+  //envia un mensaje al servido con los datos del nuevo jugador
   socket.emit('start', data);
 
+  //recibe datos del servidor constantemente
   socket.on('heartbeat', function(data){
+
+    //recibe la información de los jugadores que existen y sus posiciones
     players = data;
   });
 }
 
 function draw(){
   background(0, 200, 0);
+
+  //muestra y mueve al jugador
   player.mostrar();
   player.mover();
 
+  //guarda la posicion del jugador
   data = {
     x: player.x,
     y: player.y
   };
 
+  //envia al servidor la información actualizada del jugador
   socket.emit('update', data);
 
+  //recorre la lista de jugadores existentes
   for( var i = 0; i < players.length; i++) {
 
+    //Solo dibuja los jugadores que tengan un id distinto al propio
+    //Para no dibujarse 2 veces
     if(players[i].id !== socket.id){
 
       fill(255);
@@ -43,24 +62,29 @@ function draw(){
   }
 }
 
+//funcion jugador
 function Player(x, y) {
   this.x = x;
   this.y = y;
   this.tam = 30;
 
+  //Dibuja al jugador
   this.mostrar = function() {
     fill(0, 50, 0);
     ellipse(this.x, this.y, this.tam, this.tam);
   }
 
+  //mueve al jugador
   this.mover = function() {
+
+    //Calcula la diferencia entre el mouse y la posicion del jugador
     var difX = mouseX - this.x;
     var difY = mouseY - this.y;
 
+    //mueve al jugador una fracción de la distancia con el mouse
     if(abs(difX) > 1.0) {
       this.x = this.x + difX/32.0;
     }
-
     if(abs(difY) > 1.0) {
       this.y = this.y + difY/32.0;
     }

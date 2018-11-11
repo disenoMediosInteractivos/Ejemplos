@@ -2,7 +2,7 @@ var express = require('express');
 var app = express(); //crea una app de express
 var server = app.listen(3000); //inicia un servidor en el puerto 3000
 
- //muestra en la pagina los contenidos de la carpeta 'public'
+//muestra en la pagina los contenidos de la carpeta 'public'
 app.use(express.static('public'));
 
 console.log("socket server is running");
@@ -41,6 +41,7 @@ function newConnection(socket) {
 
   //start
   function start(data) {
+
     //crea un nuevo jugador con los datos de posicion recibidos y el id del cliente
     player = new Player(data.x, data.y, socket.id);
     players.push(player); //agrega el jugador a la lista players

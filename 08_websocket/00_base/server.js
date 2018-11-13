@@ -7,12 +7,12 @@ app.use(express.static('public'));
 
 console.log("socket server is running");
 
-var socket = require('socket.io'); //importa la librería express
+var socket = require('socket.io'); //importa la librería scoket.io
 var io = socket(server); //crea un servidor de socket.io
 
 //cada vez que el servidor recibe una nueva conexión llama a la función 'newConnection'
 io.sockets.on('connection', newConnection)
 
 function newConnection(socket) { //'socket' es la información del cliente que se conectó
-
+  //código aquí
 }

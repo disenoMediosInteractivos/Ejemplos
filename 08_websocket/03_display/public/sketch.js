@@ -24,7 +24,7 @@ function setup() {
   //envia el mensaje start
   socket.emit('start');
 
-  //Recibe el mensaje 'display del profesor'
+  //Recibe el mensaje 'display del servidor'
   socket.on('display', function(data) { //data = es true or false
 
     //asigna el valor de data a display
@@ -55,7 +55,7 @@ function setup() {
     }
   });
 
-  //cuando recibe el mensaje 'newPlayer' del servidor
+  //cuando recibe el mensaje 'update' del servidor
   socket.on('update', function(data) { //data es un objeto con valores VelX, velY y id
 
     //recorre la lista de jugadores

@@ -7,7 +7,7 @@ var ip = "http://0.0.0.0:3000"; //reemplazar!
 function setup() {
 
   createCanvas(windowWidth, windowHeight);
-  background(255);
+  background(255, 0, 0);
 
   //conectar el socket al servidor de la ip del dispositivo
   socket = io.connect(ip);

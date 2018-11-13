@@ -17,8 +17,8 @@ function Player(id) {
 
   //mueve al jugador
   this.mover = function() {
-    this.x += this.velX * this.tam;
-    this.y += this.velY * this.tam;
+    this.x += this.velX * this.tam/2;
+    this.y += this.velY * this.tam/2;
 
     this.x = constrain(this.x, this.tam, width - this.tam);
     this.y = constrain(this.y, this.tam, height - this.tam);

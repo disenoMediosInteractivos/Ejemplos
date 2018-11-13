@@ -67,6 +67,7 @@
   * [Ejemplo](https://disenomediosinteractivos.github.io/Ejemplos/07_camera/05_expression_detection_smile/) - [editar](https://editor.p5js.org/laurajunco/sketches/BJT1nF_2Q)
 
 ## Multijugador
-1. [Configuración](https://github.com/disenoMediosInteractivos/Ejemplos/tree/master/08_websocket/01_connect)
-2. [Datos en tiempo real](https://github.com/disenoMediosInteractivos/Ejemplos/tree/master/08_websocket/02_share_data)
-3. [Display](https://github.com/disenoMediosInteractivos/Ejemplos/tree/master/08_websocket/03_display)
+1. [Código base](https://github.com/disenoMediosInteractivos/Ejemplos/tree/master/08_websocket/00_base)
+2. [Configuración](https://github.com/disenoMediosInteractivos/Ejemplos/tree/master/08_websocket/01_connect)
+3. [Datos en tiempo real](https://github.com/disenoMediosInteractivos/Ejemplos/tree/master/08_websocket/02_share_data)
+4. [Display](https://github.com/disenoMediosInteractivos/Ejemplos/tree/master/08_websocket/03_display)
